@@ -13,7 +13,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   String _selectedCategory = 'Smart Watch';
   String _searchQuery = '';
-  bool _isGridView = true;
+  bool _isGridView = true; // Toggle between grid and list view
   final TextEditingController _searchController = TextEditingController();
 
   final List<String> _categories = [

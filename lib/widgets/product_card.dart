@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:watch_store_app/models/watch.dart';
+import 'package:watch_store_app/screens/details_screen.dart';
 import 'package:watch_store_app/utils/constants.dart';
 
 class ProductCard extends StatefulWidget {
@@ -18,6 +19,14 @@ class _ProductCardState extends State<ProductCard> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => DetailsScreen(watch: widget.watch),
+          ),
+        );
+      },
       onTapDown: (_) => setState(() => _scale = 0.95), // Scale down on press
       onTapUp: (_) => setState(() => _scale = 1.0), // Scale back on release
       onTapCancel: () => setState(() => _scale = 1.0),
@@ -50,12 +59,15 @@ class _ProductCardState extends State<ProductCard> {
         children: [
           Expanded(
             child: Center(
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(15),
-                child: Image.network(
-                  widget.watch.imageUrl,
-                  fit: BoxFit.contain,
-                  height: 120,
+              child: Hero(
+                tag: widget.watch.imageUrl, // For animation to details
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Image.network(
+                    widget.watch.imageUrl,
+                    fit: BoxFit.contain,
+                    height: 120,
+                  ),
                 ),
               ),
             ),
@@ -90,13 +102,18 @@ class _ProductCardState extends State<ProductCard> {
       padding: const EdgeInsets.all(16.0),
       child: Row(
         children: [
-          Container(
-            width: 100,
-            height: 100,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
-            child: Image.network(widget.watch.imageUrl, fit: BoxFit.contain),
+          // Image section
+          Hero(
+            tag: widget.watch.imageUrl, // For animation to details
+            child: Container(
+              width: 100,
+              height: 100,
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
+              child: Image.network(widget.watch.imageUrl, fit: BoxFit.contain),
+            ),
           ),
           const SizedBox(width: 16),
+          // Details section
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
