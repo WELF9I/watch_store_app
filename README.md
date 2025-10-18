@@ -1,4 +1,5 @@
-# 🎯 Watch Store E-commerce App - Test Technique Flutter Junior
+# 🎯 Watch Store E-commerce App 
+<img width="396" height="861" alt="Screenshot_20251018_235320" src="https://github.com/user-attachments/assets/a49da98e-c229-43c4-8fe3-b690b975b4ce" />
 
 Application mobile e-commerce de vente de montres intelligentes, développée avec Flutter en respectant scrupuleusement le design Figma et les exigences techniques.
 
