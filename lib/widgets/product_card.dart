@@ -63,7 +63,7 @@ class _ProductCardState extends State<ProductCard> {
                 tag: widget.watch.imageUrl, // For animation to details
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(15),
-                  child: Image.network(
+                  child: Image.asset(
                     widget.watch.imageUrl,
                     fit: BoxFit.contain,
                     height: 120,
@@ -108,8 +108,10 @@ class _ProductCardState extends State<ProductCard> {
             child: Container(
               width: 100,
               height: 100,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
-              child: Image.network(widget.watch.imageUrl, fit: BoxFit.contain),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Image.asset(widget.watch.imageUrl, fit: BoxFit.contain),
             ),
           ),
           const SizedBox(width: 16),

@@ -106,7 +106,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       tag: index == 0
                           ? widget.watch.imageUrl
                           : '${widget.watch.imageUrl}_$index',
-                      child: Image.network(
+                      child: Image.asset(
                         widget.watch.gallery[index],
                         height: 300,
                         fit: BoxFit.contain,

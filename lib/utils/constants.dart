@@ -13,72 +13,72 @@ class AppColors {
 }
 
 class AppStyles {
-  static final titleStyle = GoogleFonts.poppins(
+  static final titleStyle = GoogleFonts.raleway(
     fontSize: 30,
     fontWeight: FontWeight.bold,
     color: AppColors.dark,
     height: 1.3,
   );
 
-  static final bodyStyle = GoogleFonts.poppins(
+  static final bodyStyle = GoogleFonts.raleway(
     fontSize: 16,
     fontWeight: FontWeight.w500,
     color: AppColors.dark,
   );
 
-  static final categoryStyle = GoogleFonts.poppins(
+  static final categoryStyle = GoogleFonts.raleway(
     fontSize: 15,
     fontWeight: FontWeight.w500,
     color: AppColors.gray,
   );
 
-  static final categoryActiveStyle = GoogleFonts.poppins(
+  static final categoryActiveStyle = GoogleFonts.raleway(
     fontSize: 15,
     fontWeight: FontWeight.w500,
     color: AppColors.dark,
   );
 
-  static final productNameStyle = GoogleFonts.poppins(
+  static final productNameStyle = GoogleFonts.raleway(
     fontSize: 16,
     fontWeight: FontWeight.bold,
     color: AppColors.dark,
   );
 
-  static final brandStyle = GoogleFonts.poppins(
+  static final brandStyle = GoogleFonts.raleway(
     fontSize: 14,
     fontWeight: FontWeight.w400,
     color: AppColors.searchGray,
   );
 
-  static final priceStyle = GoogleFonts.poppins(
+  static final priceStyle = GoogleFonts.raleway(
     fontSize: 16,
     fontWeight: FontWeight.bold,
     color: AppColors.primaryPurple,
   );
 
-  static final detailsTitleStyle = GoogleFonts.poppins(
+  static final detailsTitleStyle = GoogleFonts.raleway(
     fontSize: 24,
     fontWeight: FontWeight.bold,
     color: AppColors.dark,
   );
 
-  static final subtitleStyle = GoogleFonts.poppins(
+  static final subtitleStyle = GoogleFonts.raleway(
     fontSize: 14,
     color: AppColors.gray,
   );
 
-  static final descriptionStyle = GoogleFonts.poppins(
+  static final descriptionStyle = GoogleFonts.raleway(
     fontSize: 14,
     color: AppColors.searchGray,
     height: 1.5,
   );
 
-  static final tabStyle = GoogleFonts.poppins(
+  static final tabStyle = GoogleFonts.raleway(
     fontSize: 16,
     fontWeight: FontWeight.w600,
   );
 
-  static final colorChipStyle = GoogleFonts.poppins(
+  static final colorChipStyle = GoogleFonts.raleway(
     fontSize: 14,
     color: AppColors.dark,
   );
@@ -90,98 +90,93 @@ const List<Watch> watches = [
     name: 'Apple Watch SE Gen 2',
     brand: 'Apple',
     price: 349.99,
-    imageUrl:
-        'https://thewatchstrap.co/wp-content/uploads/2020/11/Silicone-Solo-Loop-Apple-Watch-Orange-669x608.jpg',
+    imageUrl: 'assets/images/Apple Watch SE Gen 2.jpg',
     description:
         'The aluminum case is lightweight and made from 100 percent recycled aerospace grade alloy.',
     rating: 4.9,
     colors: ['Silver', 'Bright Orange', 'Starlight'],
     gallery: [
-      'https://thewatchstrap.co/wp-content/uploads/2020/11/Silicone-Solo-Loop-Apple-Watch-Orange-669x608.jpg',
-      'https://m.media-amazon.com/images/I/61em2RBifsL.jpg',
+      'assets/images/Apple Watch SE Gen 2.jpg',
+      'assets/images/Galaxy Watch 4.jpg',
     ],
   ),
   Watch(
     name: 'Galaxy Watch 4',
     brand: 'Samsung',
     price: 249.99,
-    imageUrl: 'https://m.media-amazon.com/images/I/61em2RBifsL.jpg',
+    imageUrl: 'assets/images/Galaxy Watch 4.jpg',
     description:
         'Advanced health monitoring and seamless integration with Android devices.',
     rating: 4.5,
     colors: ['Black', 'Silver', 'Pink Gold'],
     gallery: [
-      'https://m.media-amazon.com/images/I/61em2RBifsL.jpg',
+      'assets/images/Galaxy Watch 4.jpg',
+      'assets/images/Apple Watch SE Gen 2.jpg',
     ],
   ),
   Watch(
     name: 'Amazfit GTS 2',
     brand: 'Amazfit',
     price: 199.99,
-    imageUrl:
-        'https://m.media-amazon.com/images/I/610FHtXsfnL._UF894,1000_QL80_.jpg',
-    description:
-        'Sleek design with long battery life and built-in GPS.',
+    imageUrl: 'assets/images/Amazfit GTS 2.jpg',
+    description: 'Sleek design with long battery life and built-in GPS.',
     rating: 4.3,
     colors: ['Grey', 'Black', 'Gold'],
     gallery: [
-      'https://m.media-amazon.com/images/I/610FHtXsfnL._UF894,1000_QL80_.jpg',
+      'assets/images/Amazfit GTS 2.jpg',
+      'assets/images/Galaxy Watch 7.jpg',
     ],
   ),
   Watch(
     name: 'Galaxy Watch 7',
     brand: 'Samsung',
     price: 279.99,
-    imageUrl:
-        'https://m.media-amazon.com/images/I/71E8iEWXY9L._AC_UF894,1000_QL80_.jpg',
-    description:
-        'Latest model with enhanced AI features and health tracking.',
+    imageUrl: 'assets/images/Galaxy Watch 7.jpg',
+    description: 'Latest model with enhanced AI features and health tracking.',
     rating: 4.7,
     colors: ['Green', 'Silver', 'Black'],
     gallery: [
-      'https://m.media-amazon.com/images/I/71E8iEWXY9L._AC_UF894,1000_QL80_.jpg',
+      'assets/images/Galaxy Watch 7.jpg',
+      'assets/images/Galaxy Watch 4.jpg',
     ],
   ),
   Watch(
     name: 'Apple Watch Series 8',
     brand: 'Apple',
     price: 429.99,
-    imageUrl:
-        'https://thewatchstrap.co/wp-content/uploads/2020/11/Silicone-Solo-Loop-Apple-Watch-Orange-669x608.jpg',
-    description:
-        'Advanced sensors for temperature and crash detection.',
+    imageUrl: 'assets/images/Apple Watch SE Gen 2.jpg',
+    description: 'Advanced sensors for temperature and crash detection.',
     rating: 4.8,
     colors: ['Midnight', 'Starlight', 'Red'],
     gallery: [
-      'https://thewatchstrap.co/wp-content/uploads/2020/11/Silicone-Solo-Loop-Apple-Watch-Orange-669x608.jpg',
+      'assets/images/Apple Watch SE Gen 2.jpg',
+      'assets/images/Amazfit GTS 2.jpg',
     ],
   ),
   Watch(
     name: 'Mi Watch Lite',
     brand: 'Xiaomi',
     price: 149.99,
-    imageUrl:
-        'https://m.media-amazon.com/images/I/610FHtXsfnL._UF894,1000_QL80_.jpg',
-    description:
-        'Affordable smartwatch with heart rate monitoring and GPS.',
+    imageUrl: 'assets/images/Amazfit GTS 2.jpg',
+    description: 'Affordable smartwatch with heart rate monitoring and GPS.',
     rating: 4.2,
     colors: ['Black', 'Ivory', 'Navy'],
     gallery: [
-      'https://m.media-amazon.com/images/I/610FHtXsfnL._UF894,1000_QL80_.jpg',
+      'assets/images/Amazfit GTS 2.jpg',
+      'assets/images/Galaxy Watch 7.jpg',
     ],
   ),
   Watch(
     name: 'Huawei Watch GT 3',
     brand: 'Huawei',
     price: 299.99,
-    imageUrl:
-        'https://m.media-amazon.com/images/I/71E8iEWXY9L._AC_UF894,1000_QL80_.jpg',
-    description:
-        'Long battery life with professional sports modes.',
+    imageUrl: 'assets/images/Galaxy Watch 7.jpg',
+    description: 'Long battery life with professional sports modes.',
     rating: 4.6,
     colors: ['Black', 'Brown', 'White'],
     gallery: [
-      'https://m.media-amazon.com/images/I/71E8iEWXY9L._AC_UF894,1000_QL80_.jpg',
+      'assets/images/Galaxy Watch 7.jpg',
+      'assets/images/Galaxy Watch 4.jpg',
     ],
   ),
 ];

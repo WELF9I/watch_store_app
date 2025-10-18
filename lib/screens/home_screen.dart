@@ -176,7 +176,9 @@ class _HomeScreenState extends State<HomeScreen> {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 16.0),
-                  child: _isGridView
+                  child: _filteredWatches.isEmpty
+                      ? _buildEmptyState()
+                      : _isGridView
                       ? GridView.builder(
                           gridDelegate:
                               const SliverGridDelegateWithFixedCrossAxisCount(
@@ -207,6 +209,50 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  // Empty state widget when no products found
+  Widget _buildEmptyState() {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(Icons.search_off_rounded, size: 80, color: Colors.grey[300]),
+          const SizedBox(height: 16),
+          Text(
+            'No products found',
+            style: AppStyles.productNameStyle.copyWith(
+              fontSize: 20,
+              color: Colors.grey[600],
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            _searchQuery.isNotEmpty
+                ? 'No results for "${_searchQuery}"'
+                : 'No products in ${_selectedCategory}',
+            style: AppStyles.brandStyle.copyWith(fontSize: 15),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 24),
+          TextButton.icon(
+            onPressed: () {
+              setState(() {
+                _searchQuery = '';
+                _searchController.clear();
+                _selectedCategory = 'Smart Watch';
+              });
+            },
+            icon: const Icon(Icons.refresh_rounded),
+            label: const Text('Clear Filters'),
+            style: TextButton.styleFrom(
+              foregroundColor: const Color(0xFF6C63FF),
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+            ),
+          ),
+        ],
       ),
     );
   }
