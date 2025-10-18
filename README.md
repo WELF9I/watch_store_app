@@ -145,8 +145,7 @@ dependencies:
 ## 📊 Données Produits
 
 7 montres intelligentes avec:
-- Nom, marque, prix
-- Images locales (assets)
+- Nom, marque, prix, image
 - Description détaillée
 - Notation (rating)
 - Couleurs disponibles
